@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>طلب عبر إنستغرام</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+    font-family: Arial;
+    background: #fafafa;
+    text-align: center;
+}
+.products {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    padding: 10px;
+}
+.product {
+    background: white;
+    padding: 10px;
+    border-radius: 12px;
+}
+.product img {
+    width: 100%;
+    border-radius: 12px;
+}
+button {
+    margin-top: 5px;
+    padding: 8px;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    background: #25D366;
+    color: white;
+    font-size: 14px;
+}
+</style>
+</head>
+<body>
+
+<h3>🛍️ منتجاتنا</h3>
+
+<div class="products">
+
+<div class="product">
+<img src="https://via.placeholder.com/300">
+<button onclick="order('منتج 1')">اطلب الآن</button>
+</div>
+
+<div class="product">
+<img src="https://via.placeholder.com/300">
+<button onclick="order('منتج 2')">اطلب الآن</button>
+</div>
+
+</div>
+
+<script>
+function order(product) {
+    let phone = "213XXXXXXXXX"; // رقمك
+    let msg = "سلام، شفت " + product + " فالإنستغرام وحاب نشريه";
+    window.open(`https://wa.me/${phone}?text=${encodeURIComponent(msg)}`);
+}
+</script>
+
+</body>
+</html>
